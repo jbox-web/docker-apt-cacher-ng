@@ -6,7 +6,7 @@ ENV APT_CACHER_NG_CACHE_DIR=/var/cache/apt-cacher-ng \
     APT_CACHER_NG_USER=apt-cacher-ng
 
 RUN apt-get update
-RUN apt-get upgrade
+RUN apt-get -y upgrade
 RUN apt-get install -y apt-cacher-ng
 
 COPY acng.conf /etc/apt-cacher-ng/acng.conf
